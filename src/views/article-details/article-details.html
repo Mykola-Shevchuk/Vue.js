@@ -1,0 +1,20 @@
+<section class="article-details">
+    <button @click="goBack">Back</button>
+    <p>{{article.title}}</p>
+    <p>{{article.text}}</p>
+    <p>{{article.author}}</p>
+    <p>{{article.category}}</p>
+
+    <div class="comments">
+        <h3 class="comments-title">Comments:</h3>
+        <div class="comments-list">
+            <div class="comments-list-item" v-for="comment in article.comments">
+                <p class="comments-list-item-author">{{comment.author}}</p>
+                <p class="comments-list-item-content">{{comment.text}}</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <add-comment-form v-on:add-comment="saveArticle"></add-comment-form>
+    </div>
+</section>

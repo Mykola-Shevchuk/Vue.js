@@ -1,0 +1,12 @@
+<section class="article-list">
+  <ul>
+      <select v-model="selectedOption">
+          <option selected value="">Please select one</option>
+          <option :value="option" v-for="option in options">{{option}}</option>
+      </select>
+      <div>
+          <input v-model.trim="textFilter" type="text">
+      </div>
+      <article-item v-for="article in filteredArticles" :article="article"></article-item>
+  </ul>
+</section>
