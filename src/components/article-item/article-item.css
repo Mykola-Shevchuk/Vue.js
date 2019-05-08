@@ -1,3 +1,27 @@
-.article-item {
+article:not(:first-child) {
+    margin-top: 40px;
+}
 
+.article-title {
+    padding-bottom: 20px;
+}
+
+.article-content {
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.article-details {
+    display: flex;
+    justify-content: left;
+    font-size: 13px;
+    padding-top: 10px;
+}
+
+.article-details-item:not(:last-child) {
+    margin-right: 15px;
+}
+
+.article-details-value {
+    color: #59b883;
 }

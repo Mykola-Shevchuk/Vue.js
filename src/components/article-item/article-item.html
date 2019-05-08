@@ -1,7 +1,13 @@
-<section class="article-item">
-    <p><router-link :to="`articles/${article.id}`">{{article.title}}</router-link></p>
-    <p>{{formattedText}}</p>
-    <p>{{article.author}}</p>
-    <p>{{article.category}}</p>
-</section>
-
+<article>
+    <h3 class="article-title">
+        <router-link :to="`articles/${article.id}`">{{article.title}}</router-link>
+    </h3>
+    <div class="article-content">
+        <p>{{formattedText}}</p>
+    </div>
+    <div class="article-details">
+        <div class="article-details-item">Author: <span class="article-details-value">{{article.author}}</span></div>
+        <div class="article-details-item">Category: <span class="article-details-value">{{article.category}}</span>
+        </div>
+    </div>
+</article>

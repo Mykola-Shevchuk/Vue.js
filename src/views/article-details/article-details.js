@@ -1,5 +1,5 @@
-import { fetchArticle, saveArticleComment } from '../../../client';
-import AddCommentForm from '../../components/add-comment-form';
+import { fetchArticle, saveArticleComment } from '../../../client'
+import AddCommentForm from '../../components/add-comment-form'
 
 export default {
   name: 'article-details',
@@ -12,13 +12,11 @@ export default {
       article: {}
     }
   },
-  computed: {
-
-  },
   mounted () {
-    const { id } = this.$route.params;
+    const { id } = this.$route.params
 
-    fetchArticle(id).then(({ data }) => this.article = data);
+    // eslint-disable-next-line no-return-assign
+    fetchArticle(id).then(({ data }) => this.article = data)
   },
   methods: {
     goBack () {
@@ -29,11 +27,11 @@ export default {
       const article = {
         ...this.article,
         comments: [...this.article.comments, newComment]
-      };
+      }
 
       saveArticleComment(article).then(({ data }) => {
-        this.article = data;
-      });
+        this.article = data
+      })
     }
   }
 }
