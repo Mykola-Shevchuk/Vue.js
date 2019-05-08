@@ -26,6 +26,5 @@ export default {
     fetchArticles().then(({ data }) => {
       this.articles = data
     })
-  },
-  methods: {}
+  }
 }
